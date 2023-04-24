@@ -15,6 +15,7 @@ import java.util.stream.Stream;
 @Builder(toBuilder = true)
 public class Radar {
 
+    private String radarId;
     private String knowledgeArea;
     private String description;
 

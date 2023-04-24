@@ -21,8 +21,5 @@ public class RadarData {
     private Double conceptual;
     private Double procedural;
     private Double metacognitive;
-    private Double approvalLevel = Stream.of(factual, conceptual, procedural, metacognitive)
-            .mapToDouble(Double::doubleValue)
-            .average()
-            .orElse(Double.NaN);
+    private Double approvalLevel;
 }

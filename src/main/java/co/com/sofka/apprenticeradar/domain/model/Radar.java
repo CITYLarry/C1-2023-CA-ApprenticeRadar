@@ -6,7 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -16,12 +17,6 @@ import java.util.stream.Stream;
 public class Radar {
 
     private String radarId;
-    private String knowledgeArea;
-    private String description;
 
-    private Double factual;
-    private Double conceptual;
-    private Double procedural;
-    private Double metacognitive;
-    private Double approvalLevel;
+    private List<Descriptor> descriptorList = new ArrayList<>();
 }

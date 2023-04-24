@@ -241,7 +241,7 @@ public class RadarRouterRest {
     )
     public RouterFunction<ServerResponse> deleteRadar(DeleteRadarUseCase useCase) {
         return route(
-                DELETE("/api/v1/radars/{radarsId}"),
+                DELETE("/api/v1/radars/{radarId}"),
                 request -> useCase.apply(request.pathVariable("radarId"))
                         .thenReturn(ServerResponse.ok()
                                 .contentType(MediaType.APPLICATION_JSON)

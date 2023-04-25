@@ -100,9 +100,9 @@ public class TrainingRouterRest {
         return route(
                 GET("/api/v1/training/{trainingId}"),
                 request -> useCase.apply(request.pathVariable("trainingId"))
-                        .flatMap(radar -> ServerResponse.ok()
+                        .flatMap(training -> ServerResponse.ok()
                                 .contentType(MediaType.APPLICATION_JSON)
-                                .bodyValue(radar))
+                                .bodyValue(training))
                         .onErrorResume(throwable -> ServerResponse.badRequest()
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .bodyValue(throwable.getMessage()))
@@ -242,7 +242,7 @@ public class TrainingRouterRest {
                 request -> useCase.apply(request.pathVariable("trainingId"))
                         .thenReturn(ServerResponse.ok()
                                 .contentType(MediaType.APPLICATION_JSON)
-                                .bodyValue("Deleted radar with id: " + request.pathVariable("radarId")))
+                                .bodyValue("Deleted training with id: " + request.pathVariable("trainingId")))
                         .flatMap(responseMono -> responseMono)
                         .onErrorResume(throwable -> ServerResponse.badRequest()
                                 .contentType(MediaType.APPLICATION_JSON)

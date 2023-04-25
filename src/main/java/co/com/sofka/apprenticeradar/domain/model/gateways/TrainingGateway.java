@@ -9,5 +9,5 @@ public interface TrainingGateway {
     Mono<Training> getTrainingById(String trainId);
     Mono<Training> saveTraining(Training train);
     Mono<Training> updateTraining(String trainId, Training train);
-    Mono<Training> deleteTraining(String trainId);
+    Mono<Void> deleteTraining(String trainId);
 }

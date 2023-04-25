@@ -40,4 +40,3 @@ tasks.named('test') {
 tasks.jar {
     enabled = false
 }
-

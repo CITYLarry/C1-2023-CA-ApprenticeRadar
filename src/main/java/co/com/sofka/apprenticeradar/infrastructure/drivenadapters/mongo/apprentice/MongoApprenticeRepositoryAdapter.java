@@ -67,5 +67,4 @@ public class MongoApprenticeRepositoryAdapter implements ApprenticeGateway {
                 .switchIfEmpty(Mono.error(new RuntimeException("Could not find apprentice for email: " + email)))
                 .map(apprenticeData -> mapper.map(apprenticeData, Apprentice.class));
     }
-    }
 }

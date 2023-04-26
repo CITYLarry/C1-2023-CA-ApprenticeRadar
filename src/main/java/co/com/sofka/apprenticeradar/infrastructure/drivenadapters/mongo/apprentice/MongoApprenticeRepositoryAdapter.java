@@ -1,10 +1,8 @@
 package co.com.sofka.apprenticeradar.infrastructure.drivenadapters.mongo.apprentice;
 
 import co.com.sofka.apprenticeradar.domain.model.Apprentice;
-import co.com.sofka.apprenticeradar.domain.model.Training;
 import co.com.sofka.apprenticeradar.domain.model.gateways.ApprenticeGateway;
 import co.com.sofka.apprenticeradar.infrastructure.drivenadapters.mongo.apprentice.data.ApprenticeData;
-import co.com.sofka.apprenticeradar.infrastructure.drivenadapters.mongo.training.data.TrainingData;
 import lombok.RequiredArgsConstructor;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;

@@ -1,7 +1,6 @@
 package co.com.sofka.apprenticeradar.infrastructure.entrypoints.api.radar;
 
 import co.com.sofka.apprenticeradar.domain.model.Apprentice;
-import co.com.sofka.apprenticeradar.domain.model.Radar;
 import co.com.sofka.apprenticeradar.domain.usecase.apprentice.delete.DeleteApprenticeUseCase;
 import co.com.sofka.apprenticeradar.domain.usecase.apprentice.getall.GetAllApprenticeUseCase;
 import co.com.sofka.apprenticeradar.domain.usecase.apprentice.getbyemail.GetApprenticeByEmailUseCase;
@@ -45,7 +44,7 @@ public class ApprenticeRouterRest {
                             @ApiResponse(
                                     responseCode = "200",
                                     description = "Apprentice returned successfully",
-                                    content = @Content(array = @ArraySchema(schema = @Schema(implementation = Radar.class)))
+                                    content = @Content(array = @ArraySchema(schema = @Schema(implementation = Apprentice.class)))
                             ),
                             @ApiResponse(
                                     responseCode = "204",
@@ -87,7 +86,7 @@ public class ApprenticeRouterRest {
                             @ApiResponse(
                                     responseCode = "200",
                                     description = "Apprentice found successfully",
-                                    content = @Content(schema = @Schema(implementation = Radar.class))
+                                    content = @Content(schema = @Schema(implementation = Apprentice.class))
                             ),
                             @ApiResponse(
                                     responseCode = "400",

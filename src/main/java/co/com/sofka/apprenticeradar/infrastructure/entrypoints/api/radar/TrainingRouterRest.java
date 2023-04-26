@@ -1,6 +1,5 @@
 package co.com.sofka.apprenticeradar.infrastructure.entrypoints.api.radar;
 
-import co.com.sofka.apprenticeradar.domain.model.Radar;
 import co.com.sofka.apprenticeradar.domain.model.Training;
 import co.com.sofka.apprenticeradar.domain.usecase.training.delete.DeleteTrainingUseCase;
 import co.com.sofka.apprenticeradar.domain.usecase.training.getall.GetAllTrainingUseCase;
@@ -44,7 +43,7 @@ public class TrainingRouterRest {
                             @ApiResponse(
                                     responseCode = "200",
                                     description = "Training returned successfully",
-                                    content = @Content(array = @ArraySchema(schema = @Schema(implementation = Radar.class)))
+                                    content = @Content(array = @ArraySchema(schema = @Schema(implementation = Training.class)))
                             ),
                             @ApiResponse(
                                     responseCode = "204",
@@ -86,7 +85,7 @@ public class TrainingRouterRest {
                             @ApiResponse(
                                     responseCode = "200",
                                     description = "Training found successfully",
-                                    content = @Content(schema = @Schema(implementation = Radar.class))
+                                    content = @Content(schema = @Schema(implementation = Training.class))
                             ),
                             @ApiResponse(
                                     responseCode = "400",

@@ -14,7 +14,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
         description = "API created for the agile challenge at SofkaU Bilingual Training League"
 ),      servers = {
         @Server(url = "https://c1-2023-ca-apprenticeradar-dev.up.railway.app/"),
-        @Server(url = "https://c1-2023-ca-apprenticeradar-production.up.railway.app/")
+        @Server(url = "https://c1-2023-ca-apprenticeradar-production.up.railway.app/"),
+        @Server(url = "http://localhost:8080"),
 })
 public class ApprenticeRadarApplication {
 

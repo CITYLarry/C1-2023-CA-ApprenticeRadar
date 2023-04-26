@@ -13,6 +13,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
+import java.util.ArrayList;
+
 @ExtendWith(MockitoExtension.class)
 class SaveTrainingUseCaseTest {
 
@@ -32,7 +34,8 @@ class SaveTrainingUseCaseTest {
                 "testId",
                 "test name",
                 "test cicle",
-                new Radar()
+                new Radar(),
+                new ArrayList<>()
         );
 
         Mockito.when(gateway.saveTraining(training)).thenReturn(Mono.just(training));

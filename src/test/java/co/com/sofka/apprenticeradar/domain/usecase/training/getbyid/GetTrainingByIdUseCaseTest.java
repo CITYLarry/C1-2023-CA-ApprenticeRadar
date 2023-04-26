@@ -2,9 +2,7 @@ package co.com.sofka.apprenticeradar.domain.usecase.training.getbyid;
 
 import co.com.sofka.apprenticeradar.domain.model.Radar;
 import co.com.sofka.apprenticeradar.domain.model.Training;
-import co.com.sofka.apprenticeradar.domain.model.gateways.RadarGateway;
 import co.com.sofka.apprenticeradar.domain.model.gateways.TrainingGateway;
-import co.com.sofka.apprenticeradar.domain.usecase.radar.getbyid.GetRadarByIdUseCase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,9 +14,6 @@ import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
 class GetTrainingByIdUseCaseTest {
